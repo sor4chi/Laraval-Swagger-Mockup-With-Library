@@ -16,7 +16,7 @@ use App\Http\Controllers\CategoriesController;
 */
 
 Route::prefix('articles')->group(function () {
-    Route::get('index', [ArticlesController::class, 'index']);
+    Route::get('', [ArticlesController::class, 'index']);
     Route::get('show/{id}', [ArticlesController::class, 'show']);
     Route::post('create', [ArticlesController::class, 'create']);
     Route::put('update/{id}', [ArticlesController::class, 'update']);
@@ -24,7 +24,7 @@ Route::prefix('articles')->group(function () {
 });
 
 Route::prefix('categories')->group(function () {
-    Route::get('index', [CategoriesController::class, 'index']);
+    Route::get('', [CategoriesController::class, 'index']);
     Route::get('show/{id}', [CategoriesController::class, 'show']);
     Route::post('create', [CategoriesController::class, 'create']);
     Route::put('update/{id}', [CategoriesController::class, 'update']);

@@ -1,0 +1,236 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel-Swagger-MockUpのAPIDoc",
+        "description": "これはLaravel-Swagger-MockUpのAPIDocです。このドキュメントはdarkaonline/l5-swaggerを使用して生成されました。",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/articles": {
+            "get": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Get all articles",
+                "operationId": "d87f751e8f428fb968c2791aa22f017e",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "articles": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Article"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/articles/show/{id}": {
+            "get": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Get an article by id",
+                "operationId": "b6dc709a5c41a55090ccc1bbd88a8fd3",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Article"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/articles/create": {
+            "post": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Create an article",
+                "operationId": "1564639bd83fe1c93d3086b56da93b71",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Article"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Article"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/articles/update/{id}": {
+            "put": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Update an article by id",
+                "operationId": "c4af3890c5b3ea5ed07bf3b4db1fe9cc",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Article"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Article"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/articles/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Delete an article by id",
+                "operationId": "05a36faa5d767a7b89d5152d82ce4ddc",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "description": "deleted",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Article": {
+                "properties": {
+                    "id": {
+                        "description": "unique, incremented automatically",
+                        "type": "int",
+                        "readOnly": true,
+                        "example": 1
+                    },
+                    "title": {
+                        "description": "required, max length 255",
+                        "type": "string",
+                        "example": "title1"
+                    },
+                    "description": {
+                        "description": "required, max length 255",
+                        "type": "string",
+                        "example": "description1"
+                    },
+                    "category_id": {
+                        "description": "not required, foreign key to category",
+                        "type": "int",
+                        "example": 1
+                    },
+                    "body": {
+                        "description": "required, max length 5000",
+                        "type": "string",
+                        "example": "This is an article body."
+                    },
+                    "created_at": {
+                        "description": "not required, auto-generated",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "example": "2020-01-01 00:00:00"
+                    },
+                    "updated_at": {
+                        "description": "not required, auto-generated",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "example": "2020-01-01 00:00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "Category": {
+                "properties": {
+                    "id": {
+                        "description": "unique, incremented automatically",
+                        "type": "int",
+                        "readOnly": true,
+                        "example": 1
+                    },
+                    "name": {
+                        "description": "required, max length 255",
+                        "type": "string",
+                        "example": "name1"
+                    },
+                    "slug": {
+                        "description": "required, max length 255",
+                        "type": "string",
+                        "example": "slug-1"
+                    },
+                    "created_at": {
+                        "description": "not required, auto-generated",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "example": "2020-01-01 00:00:00"
+                    },
+                    "updated_at": {
+                        "description": "not required, auto-generated",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "example": "2020-01-01 00:00:00"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
