@@ -29,12 +29,6 @@ L5_SWAGGER_GENERATE_ALWAYS=true
 ```
 .envにこれを追加することでSwaggerUIロード毎(ページ更新時)にドキュメント更新がかかる。
 
-## 主に見て欲しいところ
-- app/Model/*
-- app/Http/Controllers/*
-- storage/api-docs/api-docs.json
-- http://127.0.0.1:8000/api/documentation
-
 ## マインド・参考情報
 ライブラリを使わない場合は```storage/api-docs/api-docs.json```を手書きすることになるので、素直にライブラリ使った方がいいと思う。
 
@@ -50,7 +44,7 @@ VSCodeに"Swagger-PHP"なる拡張があり、それを入れるとシンタッ�
 ```
 [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'readOnly' at position [~~~].
 ```
-が出た時はまず基本アノテーションを書いてるModelファイルの行末コンマつけ忘れを疑って欲しい（違う時もある）。エラー箇所の特定が激ムズなのに加えフォーマッタやlintもないので一旦部分的に消して動くかやってみたり、うまく動いたところをコピペしたりするなどして解決ください。
+が出た時は基本アノテーションを書いてるModelファイルの行末コンマつけ忘れ。エラー箇所の特定が激ムズなので書留。
 
 ## 感想
 思ったよりコード量少なくスッキリかけた（Schemaの存在を知らなかった）

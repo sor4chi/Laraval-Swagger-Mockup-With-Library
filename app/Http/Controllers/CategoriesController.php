@@ -117,17 +117,13 @@ class CategoriesController extends Controller
     /**
      * @OA\Delete(
      *   tags={"categories"},
-     *   path="/api/categories/delete/{id}",
-     *   summary="Delete an categorie by id",
+     *   path="/api/categories/delete/{id}
+     *   summary="Delete a category",
      *   @OA\Response(
      *     response=200,
      *     description="Success",
      *     @OA\JsonContent(
-     *       @OA\Property(
-     *         property="message",
-     *         type="string",
-     *         description="deleted"
-     *       )
+     *       ref="#/components/schemas/Category"
      *     )
      *   )
      * )
