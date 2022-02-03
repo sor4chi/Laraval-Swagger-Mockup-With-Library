@@ -1,7 +1,7 @@
 # Laravel Swagger Sample with Library
 Swagger Library -> [L5 Swagger](https://github.com/DarkaOnLine/L5-Swagger)
 
-ちなみに[L5 Swagger](https://github.com/DarkaOnLine/L5-Swagger)は[Swagger-PHP](https://github.com/zircote/swagger-php)をLaravelに最適化したラッパーライブラリで、ルーティングを自動で組み込んでくれたり、生成を自動化してくれる。そのままの記法でかけるのでドキュメントは[こちら](https://zircote.github.io/swagger-php/)を参照するとよい。
+ちなみに[L5 Swagger](https://github.com/DarkaOnLine/L5-Swagger)は[Swagger-PHP](https://github.com/zircote/swagger-php)をLaravelに最適化したラッパーライブラリで、SwaggerDocsのルーティングを自動で組み込んでくれたり、Swagger(JSON)の生成を自動化してくれる。そのままの記法でかけるのでドキュメントは[こちら](https://zircote.github.io/swagger-php/)を参照するとよい。
 
 ## App Structure (ER)
 ![er図](db.png)
